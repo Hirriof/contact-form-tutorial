@@ -1,5 +1,6 @@
-import Head from 'next/head'
-import styles from '../styles/Home.module.css'
+//import Head from 'next/head'
+//import styles from '../styles/Home.module.css'
+//1
 import { useState } from 'react'
 
 export default function Home() {
@@ -39,25 +40,19 @@ export default function Home() {
   }
 
   return (
-    <div className={styles.container}>
-      < form className={styles.main} >
+    <div>
+      <form>
+       
+          <label htmlFor='name'>Name</label>
+          <input type='text' onChange={(e)=>{setName(e.target.value)}} name='name'  />
+        
+          <label htmlFor='email'>Email</label>
+          <input type='email' onChange={(e)=>{setEmail(e.target.value)}} name='email'  />
+                
+          <label htmlFor='message'>Message</label>
+          <input type='text' onChange={(e)=>{setMessage(e.target.value)}} name='message'  />
 
-        < formGroup className={styles.inputGroup} >
-          < label htmlFor='name'>Name</label>
-          < input type='text' onChange={(e)=>{setName(e.target.value)}} name='name' className={styles.inputField} />
-        </formGroup>
-
-        < formGroup className={styles.inputGroup} >
-          < label htmlFor='email'>Email</label>
-          < input type='email' onChange={(e)=>{setEmail(e.target.value)}} name='email' className={styles.inputField} />
-        </formGroup>
-
-        < formGroup className={styles.inputGroup} >
-          < label htmlFor='message'>Message</label>
-          < input type='text' onChange={(e)=>{setMessage(e.target.value)}} name='message' className={styles.inputField} />
-        </formGroup>
-
-        < input type='submit' onClick={(e)=>{handleSubmit(e)}}/>
+        <input type='submit' onClick={(e)=>{handleSubmit(e)}}/>
       </form >
     </div>
   )
