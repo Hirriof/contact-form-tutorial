@@ -1,5 +1,5 @@
 export default function (req, res) {
-    require('dotenv').config()
+    //require('dotenv').config()
 
     let nodemailer = require('nodemailer')
     const transporter = nodemailer.createTransport({
@@ -7,7 +7,7 @@ export default function (req, res) {
       host: "smtp.gmail.com",
          auth: {
               user: 'demo email',
-              pass: process.env.password,
+              pass: 'process.env.password',
            },
       secure: true,
     });
